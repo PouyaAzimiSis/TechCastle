@@ -1,9 +1,40 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>HomeForm.ui.qml</file>
-        <file>Page1Form.ui.qml</file>
-        <file>Page2Form.ui.qml</file>
-        <file>qtquickcontrols2.conf</file>
+        <file>QML/resources/AppIcon.png</file>
+        <file>QML/C_DayNightSwich/C_DayNightSwich.qml</file>
+        <file>QML/C_DayNightSwich/day.svg</file>
+        <file>QML/C_DayNightSwich/night.svg</file>
+        <file>QML/C_StackOfPages/C_StackOfPages.qml</file>
+        <file>QML/Components/C_Button.qml</file>
+        <file>QML/Components/C_PouyaField.qml</file>
+        <file>QML/Components/C_RectangleWithShadow.qml</file>
+        <file>QML/Components/C_VectorImage.qml</file>
+        <file>QML/P_LoginPage/fingerPrint.svg</file>
+        <file>QML/P_LoginPage/P_LoginPage.qml</file>
+        <file>QML/P_MainWindow/P_MainWindow.qml</file>
+        <file>QML/P_SplashScreen/P_SplashScreen.qml</file>
+        <file>QML/P_SplashScreen/Splash_screen.jpg</file>
+        <file>QML/resources/fonts/Roboto/LICENSE.txt</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Black.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-BlackItalic.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Bold.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-BoldItalic.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Italic.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Light.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-LightItalic.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Medium.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-MediumItalic.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Regular.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-Thin.ttf</file>
+        <file>QML/resources/fonts/Roboto/Roboto-ThinItalic.ttf</file>
+        <file>QML/resources/BackGroundLight.png</file>
+        <file>QML/Config.qml</file>
+        <file>QML/main.qml</file>
+        <file>QML/qmldir</file>
+        <file>QML/qtquickcontrols2.conf</file>
+        <file>QML/StateManager.qml</file>
+        <file>QML/Style.qml</file>
+        <file>QML/Util.qml</file>
+        <file>QML/P_UserList/P_UserList.qml</file>
     </qresource>
 </RCC>

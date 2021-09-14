@@ -1,17 +1,21 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include <QIcon>
 
 int main(int argc, char *argv[])
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-#endif
 
     QGuiApplication app(argc, argv);
+    app.setWindowIcon(QIcon(":QML/resources/AppIcon.png"));
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+
+//    For faster compile we use relative path and disabled qml.qrc in .pro file
+//    const QUrl url(QStringLiteral("../TechCastle/QML/main.qml"));
+
+//    For Release Use this qrc Path and enable qml.qrc in .pro file
+    const QUrl url(QStringLiteral("qrc:/QML/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
