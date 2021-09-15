@@ -3,6 +3,6 @@ import QtQuick 2.0
 
 QtObject {
 
-    property string serverAdress:"http://167.99.75.222:4201"
+    property string serverAdress:"http://123.45.66.777:4201"
 
 }

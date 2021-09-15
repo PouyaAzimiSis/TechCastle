@@ -107,11 +107,13 @@ Rectangle {
             id: id_passWord
             title: "New Password"
             isProtected: true
+            inputText: ""
         }
         C_EditableField {
             id: id_passwordConfirm
             title: "New Password Confirmation"
             isProtected: true
+            inputText: ""
         }
     }
 
@@ -151,6 +153,7 @@ Rectangle {
                 }
 
 
+                console.log(EditedData.password)
                 StateManager.requestEditUser(EditedData)
                 closeWithOutSaving();
             }

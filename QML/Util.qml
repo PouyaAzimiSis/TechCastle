@@ -17,9 +17,13 @@ QtObject{
         xmlhttp.setRequestHeader("Accept", "application/json");
         xmlhttp.setRequestHeader("Content-Type", "application/json");
 
+//        const json = {
+//            "email" : "pooyasis@gmail.com", //username,
+//            "password" :"xKm8UM0n-Ypy-UA" //passowrd
+//        }
         const json = {
-            "email" : "pooyasis@gmail.com", //username,
-            "password" :"xKm8UM0n-Ypy-UA" //passowrd
+            "email" :  username,
+            "password":  passowrd
         }
 
         xmlhttp.send(JSON.stringify(json));
@@ -59,6 +63,7 @@ QtObject{
     }
     //=========================================================================
     function sendEditUserRequest(userInfo,token,callback){
+        console.log(token)
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if(xmlhttp.readyState === XMLHttpRequest.DONE){
@@ -71,32 +76,27 @@ QtObject{
         xmlhttp.setRequestHeader("Content-Type", "application/json");
         xmlhttp.setRequestHeader("Authorization", "Bearer "+ token);
 
-        xmlhttp.setRequestHeader("authority", Config.serverAdress);
-        xmlhttp.setRequestHeader("origin", Config.serverAdress);
-        xmlhttp.setRequestHeader("referer", Config.serverAdress);
-
-
-
         const json = {
-//            "name" : userInfo.name,
+            "name" : userInfo.name,
             "nickname": userInfo.nickname,
-//            "language_id": userInfo.language_id,
-//            "status": userInfo.status,
-//            "min_bet": userInfo.min_bet,
-//            "max_bet": userInfo.max_bet,
-//            "user_level": userInfo.user_level,
+            "language_id": userInfo.language_id,
+            "status": userInfo.status,
+            "min_bet": userInfo.min_bet,
+            "max_bet": userInfo.max_bet,
+            "user_level": userInfo.user_level,
         }
 
 
         //apped password if is not empty and are same
+        console.log("password"+userInfo.password+userInfo.password_confirmation)
         if(userInfo.password.length >0 &&
-                userInfo.confirmPassword.length > 0){
+                userInfo.password_confirmation.length > 0){
             json.password = userInfo.password;
-            json.password_confirmation = userInfo.confirmPassword
+            json.password_confirmation = userInfo.password_confirmation
         }
 
         console.log(JSON.stringify(json))
-        xmlhttp.send(json);
+        xmlhttp.send(JSON.stringify(json));
     }
 }
 
