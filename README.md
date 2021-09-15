@@ -4,7 +4,7 @@
 just Open **config.qml** and write your server adress
 ***
 I did this demo in 2 days (7 hours totaly) for TechCasle company as proof of my abilit to design and code in Qt/Qml/C++.
-It is not complete and so much design code can be added, but basic desired functionality works fine.
+It is not complete and can have so much improvment, but basic desired functionality works fine.
 ***
 For heavy process program must be multiThread and run time consuming codes in c++.
 ***
