@@ -22,3 +22,6 @@ To Do:
 * more Color in UI
 * Fix inputFields when thay have more Charector than space available
 
+***
+### Demo Video!
+[![Watch the video](https://img.youtube.com/vi/TXoXtarHOXE>/hqdefault.jpg)](https://youtu.be/TXoXtarHOXE)
