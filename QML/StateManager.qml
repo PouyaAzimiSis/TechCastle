@@ -7,6 +7,7 @@ Item {
     signal loginResponse(var isConfirmed);
     signal userListUpdated(var listOfusers);
     signal userLogedOut();
+    signal openUserEditWindow(var userInfo);
 
 
     property var lastToken

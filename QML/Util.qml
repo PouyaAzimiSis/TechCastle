@@ -86,7 +86,7 @@ QtObject{
             "password_confirmation" : userInfo.password
         }
 
-        xmlhttp.send();
+        xmlhttp.send(json);
     }
 }
 

@@ -43,5 +43,8 @@
         <file>QML/P_UserList/C_EditIcon.qml</file>
         <file>QML/P_UserList/edit.svg</file>
         <file>QML/C_UserEditWndow/C_UserEditWndow.qml</file>
+        <file>QML/Components/C_Blur.qml</file>
+        <file>QML/Components/C_UserEdit.qml</file>
+        <file>QML/Components/C_EditableField.qml</file>
     </qresource>
 </RCC>

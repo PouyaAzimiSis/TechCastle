@@ -3,9 +3,9 @@ import "../"
 Item {
     id:root
     property alias color: id_underLine.color
-    property string text: id_textInput.text
-    property var hintText: "&!"
-    property var isProtected: false
+    property alias text: id_textInput.text
+    property string hintText: ""
+    property bool isProtected: false
     onIsProtectedChanged: {
         if(isProtected){
             id_textInput.echoMode = TextInput.Password
@@ -58,6 +58,7 @@ Item {
                 id_underLine.color = Style.secondaryColor
             }
             else{
+                id_underLine.color = "black"
                 let lenthOfText = id_textInput.text.length
                 if(lenthOfText === 0){
                     id_hint.opacity = 1;

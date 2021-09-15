@@ -5,10 +5,7 @@ import "../"
 Item{
     id: rootroot
     signal clicked();
-    MouseArea{
-        anchors.fill: parent
-        onClicked: rootroot.clicked();
-    }
+
 
     Rectangle {
         id: root
@@ -19,7 +16,7 @@ Item{
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.leftMargin: 4
-        signal clicked();
+
 
         property alias text: id_text.text
         property string mainColor: "#de774e"
@@ -34,7 +31,7 @@ Item{
 
         MouseArea{
             anchors.fill: parent
-            onClicked: root.clicked()
+            onClicked: rootroot.clicked()
 
             hoverEnabled: true
             onHoveredChanged: {
