@@ -14,9 +14,9 @@ Window {
     flags: Qt.SplashScreen
     x: (Screen.width - id_splash.width) / 2
     y: (Screen.height - id_splash.height) / 3.5
-    width: 1000
+    width: 1200
     height: 700
-    opacity: 0.75;
+    opacity: 0.7;
 
     NumberAnimation on opacity{
         id: id_closeAnimaiton

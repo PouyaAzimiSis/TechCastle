@@ -14,11 +14,24 @@ QtObject {
         source: "./resources/fonts/Roboto/Roboto-Regular.ttf";
 //        name:"Roboto"
     }
+    property var fontTitle: Qt.font({
+                                       family: fixedFont.name,
+                                       weight: 56,
+                                       italic: false,
+                                       pointSize: 18
+                                   })
+
     property var fontButton: Qt.font({
                                        family: fixedFont.name,
 //                                       weight: Font.Black,
                                        italic: false,
                                        pointSize: 13
+                                   })
+    property var fontsSmall: Qt.font({
+                                       family: fixedFont.name,
+                                        weight: 50,
+                                       italic: false,
+                                       pointSize: 9
                                    })
     property var fontTextHint: Qt.font({
                                        family: fixedFont.name,

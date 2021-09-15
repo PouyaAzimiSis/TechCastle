@@ -4,8 +4,11 @@ import "../"
 import "../Components"
 
 Item {
-    anchors.fill: parent
 
+    function clearFields() {
+
+        id_password.text = ""
+    }
 
     C_RectangleWithShadow {
         width: 350

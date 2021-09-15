@@ -6,11 +6,18 @@ Item {
 
     signal loginResponse(var isConfirmed);
     signal userListUpdated(var listOfusers);
+    signal userLogedOut();
+
 
     property var lastToken
-    property string lastEmail: ""
+    property string lastEmail
+    onLastEmailChanged: {
+        console.log("email changed"+ lastEmail)
+    }
+
     property var listOfUsers
 
+    //==============================================================================
     signal sendLoginRequest(var username,var password);
     onSendLoginRequest:{
         root.lastEmail = username;
@@ -22,30 +29,40 @@ Item {
                                          root.lastToken = jsonRes.data.token
                                          root.requestUsersList();
                                          loginResponse(true);
-//                                         console.log("Loged In with token::" + root.lastToken)
                                          return;
                                      }
                                  }
                                  loginResponse(false);
                              })
     }
-
-
     //==============================================================================
     signal requestUsersList();
     onRequestUsersList: {
-        console.log("getting user list: "+ root.lastToken);
         Util.sendUsersListRequest(root.lastToken,(res)=>{
                                       let jsonRes = JSON.parse(res.responseText);
-                                      listOfUsers = jsonRes.data.Items;
-                                      root.userListUpdated(listOfUsers);
-                                      console.log("userList resp:"+res.responseText);
-
+                                      root.listOfUsers = jsonRes.data.items;
+                                      root.userListUpdated(root.listOfUsers);
                                   }
                                   );
     }
-
-
+    //==============================================================================
+    signal requestLogOut();
+    onRequestLogOut: {
+        Util.sendLogOutRequest(root.lastToken,(res)=>{
+                                   root.lastToken = ""
+                                   userLogedOut()
+                               }
+                               );
+    }
+    //==============================================================================
+    signal requestEditUser(var userInfo);
+    onRequestEditUser:  {
+        Util.sendEditUserRequest(userInfo,root.lastToken,(res)=>{
+                                   root.lastToken = ""
+                                   userLogedOut()
+                               }
+                               );
+    }
 
 
 }

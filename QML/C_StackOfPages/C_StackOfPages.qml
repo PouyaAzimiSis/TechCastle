@@ -24,7 +24,7 @@ Item {
                 property: "opacity"
                 from: 0
                 to:1
-                duration: 500
+                duration: 1000
             }
         }
         pushExit: Transition {
@@ -32,7 +32,7 @@ Item {
                 property: "opacity"
                 from: 1
                 to:0
-                duration: 500
+                duration: 1000
             }
         }
         popEnter: Transition {
@@ -40,7 +40,7 @@ Item {
                 property: "opacity"
                 from: 0
                 to:1
-                duration: 500
+                duration: 1000
             }
         }
         popExit: Transition {
@@ -48,7 +48,7 @@ Item {
                 property: "opacity"
                 from: 1
                 to:0
-                duration: 500
+                duration: 1000
             }
         }
 
@@ -56,6 +56,7 @@ Item {
     Component{
         id:id_loginPage
         P_LoginPage {
+            id:id_loginPageObjec
         }
     }
 
@@ -76,8 +77,9 @@ Item {
             }
         }
 
-        onUserListUpdated:{
-
+        onUserLogedOut: {
+            stack.pop();
+            stack.push(id_loginPage);
         }
     }
 }

@@ -31,10 +31,17 @@
         <file>QML/Config.qml</file>
         <file>QML/main.qml</file>
         <file>QML/qmldir</file>
-        <file>QML/qtquickcontrols2.conf</file>
         <file>QML/StateManager.qml</file>
         <file>QML/Style.qml</file>
         <file>QML/Util.qml</file>
         <file>QML/P_UserList/P_UserList.qml</file>
+        <file>QML/P_UserList/C_Titles.qml</file>
+        <file>QML/P_UserList/C_Title.qml</file>
+        <file>QML/P_UserList/C_TableUsers.qml</file>
+        <file>QML/P_UserList/C_TableDelegate.qml</file>
+        <file>QML/P_UserList/C_DataField.qml</file>
+        <file>QML/P_UserList/C_EditIcon.qml</file>
+        <file>QML/P_UserList/edit.svg</file>
+        <file>QML/C_UserEditWndow/C_UserEditWndow.qml</file>
     </qresource>
 </RCC>
