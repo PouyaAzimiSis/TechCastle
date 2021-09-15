@@ -47,6 +47,7 @@ Rectangle {
                     "min_bet": userData.min_bet,
                     "max_bet": userData.max_bet,
                     "user_level": userData.level,
+                    "nickname": userData.nickname
 
                 }
 

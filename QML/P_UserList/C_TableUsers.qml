@@ -9,12 +9,12 @@ Item {
         onUserListUpdated:{
 
 //            console.log("Data for table:"+listOfusers.data.items);
-            console.log("Data for table:"+listOfusers);
+//            console.log("Data for table:"+listOfusers);
             id_model.clear();
             for(let i=0;i<listOfusers.length;i++){
                 id_model.append({"info":listOfusers[i]})
             }
-            console.log("data in model:"+id_model.count)
+//            console.log("data in model:"+id_model.count)
 
         }
     }

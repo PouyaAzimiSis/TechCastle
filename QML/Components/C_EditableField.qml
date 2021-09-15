@@ -4,7 +4,8 @@ import "../"
 Item {
     id: root
     property string title: "-"
-    property string inputText: ""
+    property alias inputText: nickname.text
+    property bool isProtected: false
 
     Layout.fillWidth: true
     Layout.fillHeight: true
@@ -20,10 +21,11 @@ Item {
     }
 
     C_PouyaField {
+        id: nickname
         width: parent.width
         anchors.bottom: parent.bottom
         height: 40
-        text: root.inputText
+        isProtected: root.isProtected
 
     }
 }

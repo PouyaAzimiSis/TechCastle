@@ -59,10 +59,10 @@ Item {
     signal requestEditUser(var userInfo);
     onRequestEditUser:  {
         Util.sendEditUserRequest(userInfo,root.lastToken,(res)=>{
-                                   root.lastToken = ""
-                                   userLogedOut()
-                               }
-                               );
+                                     console.log(res.responseText)
+                                     root.requestUsersList();
+                                 }
+                                 );
     }
 
 

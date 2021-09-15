@@ -75,17 +75,27 @@ QtObject{
         xmlhttp.setRequestHeader("origin", Config.serverAdress);
         xmlhttp.setRequestHeader("referer", Config.serverAdress);
 
+
+
         const json = {
-            "name" : userInfo.name,
-            "language_id": userInfo.language_id,
-            "status": userInfo.status,
-            "min_bet": userInfo.min_bet,
-            "max_bet": userInfo.max_bet,
-            "user_level": userInfo.user_level,
-            "password" : userInfo.password,
-            "password_confirmation" : userInfo.password
+//            "name" : userInfo.name,
+            "nickname": userInfo.nickname,
+//            "language_id": userInfo.language_id,
+//            "status": userInfo.status,
+//            "min_bet": userInfo.min_bet,
+//            "max_bet": userInfo.max_bet,
+//            "user_level": userInfo.user_level,
         }
 
+
+        //apped password if is not empty and are same
+        if(userInfo.password.length >0 &&
+                userInfo.confirmPassword.length > 0){
+            json.password = userInfo.password;
+            json.password_confirmation = userInfo.confirmPassword
+        }
+
+        console.log(JSON.stringify(json))
         xmlhttp.send(json);
     }
 }

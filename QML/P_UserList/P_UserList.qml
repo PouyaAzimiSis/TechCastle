@@ -134,8 +134,12 @@ Item{
         id: id_editUserWindow
         anchors.centerIn: parent
         width: 420
-        height: 550
+        height: 600
         z:3
+        onCloseWithOutSaving: {
+            id_editUserWindow.opacity = 0;
+            id_blur.opacity = 0;
+        }
     }
 }
 
