@@ -9,7 +9,7 @@ It is not complete and can have so much improvment, but basic desired functional
 For heavy process program must be multiThread and run time consuming codes in c++.
 ***
 In this project I used **splashScreen** and load main page dynamicly so program has bether UX and Brand Identity.
-This project didn't any c++ code, It is done with js/QML.
+in this project I did'nt put much c++ code, It is mostly done with js/QML.
 In future I will add c++ and connect to QML as I've Taught in [my youtube Chanel](https://www.youtube.com/channel/UC3ptA4KpnAkZI7tWram6q_Q) 
 and in [this video](https://www.youtube.com/watch?v=Nma3c3YxsUo&t=11s)
 ***
