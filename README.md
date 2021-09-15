@@ -24,4 +24,4 @@ To Do:
 
 ***
 ### Demo Video!
-[![Watch the video](https://img.youtube.com/vi/TXoXtarHOXE>/hqdefault.jpg)](https://youtu.be/TXoXtarHOXE)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TXoXtarHOXE/0.jpg)](https://youtu.be/TXoXtarHOXE)
